@@ -76,4 +76,20 @@ next.addEventListener('click', function(){
     card[activeCard].classList.remove('d-none');  
 })
 
+// ARRIBUISCO LE FUNZIONALITÀ AL PULSANTE PREV
+prev.addEventListener('click', function(){
+    // CANCELLO LA CARTA ATTUALMENTE ATTIVA
+    card[activeCard].classList.add('d-none');
+
+    // AGGIUNGO LE CONDIZIONI PER EVITARE DI ANDARE OLTRE L'ULTIMO ELEMENTO
+    if(activeCard == 0){
+        // INIZIO DA CAPO
+        activeCard = images.length - 1;
+    } else {
+        // DECREMENTO IL VALORE DELLA CARTA ATTIVA
+        activeCard--;
+    }
+    // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
+    card[activeCard].classList.remove('d-none');  
+})
 
