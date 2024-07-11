@@ -117,6 +117,9 @@ prev.addEventListener('click', function(){
 
 // AGGIUNGO LA FUNZIONALITÀ PER SKIPPARE DA UN IMMAGINE ALL'ALTRA CLICCANDOCI SOPRA 
 images.forEach((elem, index) => {
-    
+    // AGGIUNGO UN EVENTO CLICK ALL'ELEMENTO DELL'ARRAY
+    elem.addEventListener('click', function(){
+        
+    })
 
 })
