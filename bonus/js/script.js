@@ -44,6 +44,7 @@ images.forEach((elem, index) => {
             <div class="thumbsnail opacity-50">
                 <img src="./${elem.image}" alt="">
             </div>`
+
 })
 
 // INIZIALIZZO UNA VARIABILE PER TRAGHETIZZARE L'ELEMENTO ATTUALE 
@@ -114,3 +115,8 @@ prev.addEventListener('click', function(){
     
 })
 
+// AGGIUNGO LA FUNZIONALITÀ PER SKIPPARE DA UN IMMAGINE ALL'ALTRA CLICCANDOCI SOPRA 
+images.forEach((elem, index) => {
+    
+
+})
