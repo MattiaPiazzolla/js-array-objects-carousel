@@ -49,3 +49,5 @@ images.forEach((elem, index) => {
 // INIZIALIZZO UNA VARIABILE PER TRAGHETIZZARE L'ELEMENTO ATTUALE 
 let activeCard = 0;
 
+// TARGHETIZZO TUTTI GLI ELEMENTI DEL MAIN CON CALSSE ITEM
+const card = document.querySelectorAll('.item');
