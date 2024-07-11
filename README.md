@@ -43,3 +43,23 @@ Aggiungere le thumbnails (sottoforma di miniatura) ed al click attivare l’imma
 Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi) l’immagine attiva dovrà cambiare alla successiva.
 *BONUS 3:*
 Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
+
+SCOMPOSIZIONE IN SOTTOPROBLEMI
+>Creo la struttura per definire un markup statico 
+    >>Costruiamo il contenitore che accogliera le card con immagini 
+        >>>Definiamo lo stile degli elementi che verranno messi al suo interno del contenitore
+    >>Costruiamo i pulsanti di controllo Avanti e indietro per gestire il carosello una volta creata la logica su js 
+>Andiamo ad inserire gli elementi stilizzati in precedenza, tramite js 
+    >>Recuperiamo la destinazione dal DOM
+    >>Cicliamo l'array fornitoci per andare a creare le card con immaginin da inserire nel contenitore del DOM
+    >>Inizzializzo una variabile che targhetizza un elemento che voglio rendere visibile 
+    >>Recupero tutti gli elementi (card) con classe in comune 
+    >>Tolgo la classe d-none (che nasconde gli elementi) all'emento targhetizzato dalla variabile appena definita attribuendogli il valore della variabile 
+    >>Recuperiamo i pulsanti di controllo
+        >>Pulsante > (avanti)
+            >>>Faccio in modo che al click vada ad aggiungere la classe d-none all'elemento attuale 
+            >>>Incremento la variabile dell'elemento attuale
+            >>>aggiungo un controllo if per verificare che il numero del valore attuale  non super la lunghezza dell'array (-1)
+                >>>>in questo caso resettiamo la posizione attuale riportandola a zero 
+                >>>>altrimenti togliamo la classe d-none all'elemento attuale (dopo l'incremento)
+
