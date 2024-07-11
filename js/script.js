@@ -52,5 +52,11 @@ let activeCard = 0;
 // TARGHETIZZO TUTTI GLI ELEMENTI DEL MAIN CON CALSSE ITEM
 const card = document.querySelectorAll('.item');
 
-// TOLGO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
+// RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
 card[activeCard].classList.remove('d-none');
+
+// RECUPERO I PULSANTI AVANTI E INDIETRO 
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+
+
