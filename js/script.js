@@ -23,3 +23,5 @@ const images = [
     }
 ];
 
+// RECUPERO LA DESTINAZIONE DELLA CARTA PRINCIPALE
+let card = document.getElementById('card');
