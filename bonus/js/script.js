@@ -119,7 +119,22 @@ prev.addEventListener('click', function(){
 images.forEach((elem, index) => {
     // AGGIUNGO UN EVENTO CLICK ALL'ELEMENTO DELL'ARRAY
     elem.addEventListener('click', function(){
-        
+        // AGGIUNGO TUTTI GLI EVENTI DI PREMESSA CHE SI FANNO AL CLICK DEI COMANDI PREW E NEXT 
+        // CANCELLO LA CARTA ATTUALMENTE ATTIVA
+        card[activeCard].classList.add('d-none');
+        // ABBASSO L'OPACITÀ DEL THUMB DELLA CARTA ATTUALE
+        thumb[activeCard].classList.add('opacity-50');
+        thumb[activeCard].classList.remove('borderCustom');
+
+        // IMPOSTO L'INDICE ATTIVO SULL'INDICE CLICCATO
+        activeCard = index;
+
+        // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
+        card[activeCard].classList.remove('d-none');  
+        // RIMUOVO LA CLASSE opacity ALL'ELEMENTO ATTIVO 
+        thumb[activeCard].classList.remove('opacity-50');
+        thumb[activeCard].classList.add('borderCustom');
     })
 
 })
+// mi sembra logico ma non capisco perche non funziona 
