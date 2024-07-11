@@ -59,4 +59,9 @@ card[activeCard].classList.remove('d-none');
 const next = document.getElementById('next');
 const prev = document.getElementById('prev');
 
+// ARRIBUISCO LE FUNZIONALITÀ AL PULSANTE NEXT
+next.addEventListener('click', function(){
+    
+})
+
 
