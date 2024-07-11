@@ -61,6 +61,8 @@ const prev = document.getElementById('prev');
 
 // ARRIBUISCO LE FUNZIONALITÀ AL PULSANTE NEXT
 next.addEventListener('click', function(){
+    // CANCELLO LA CARTA ATTUALMENTE ATTIVA
+    card[activeCard].classList.add('d-none');
     
 })
 
