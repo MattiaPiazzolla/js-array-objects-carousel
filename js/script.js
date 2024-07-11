@@ -39,4 +39,9 @@ images.forEach((elem, index) => {
                     <p>${elem.text}</p>
                 </div>
             </div>`
+    // AGGIUNGO LE FOTO ALLE ANTEPRIME
+    thumbs.innerHTML += `
+            <div class="thumbsnail active">
+                <img src="./${elem.image}" alt="">
+            </div>`
 })
