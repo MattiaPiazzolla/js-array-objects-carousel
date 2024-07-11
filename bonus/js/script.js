@@ -141,7 +141,7 @@ prev.addEventListener('click', function(){
 
 
 // AGGIUNGO IL TIMER CHE CAMBIA IMMAGINI OGNI 3 SECONDI 
-setInterval(function(){
+const timer = setInterval(function(){
     // CANCELLO LA CARTA ATTUALMENTE ATTIVA
     card[activeCard].classList.add('d-none');
     // ABBASSO L'OPACITÀ DEL THUMB DELLA CARTA ATTUALE
@@ -162,3 +162,37 @@ setInterval(function(){
     thumb[activeCard].classList.remove('opacity-50');
     thumb[activeCard].classList.add('borderCustom');
 }, 3000)
+
+
+
+// TASTO PLAY
+document.getElementById('play').addEventListener('click', function(){
+    timer = setInterval(function(){
+        // CANCELLO LA CARTA ATTUALMENTE ATTIVA
+        card[activeCard].classList.add('d-none');
+        // ABBASSO L'OPACITÀ DEL THUMB DELLA CARTA ATTUALE
+        thumb[activeCard].classList.add('opacity-50');
+        thumb[activeCard].classList.remove('borderCustom');
+    
+        // AGGIUNGO LE CONDIZIONI PER EVITARE DI ANDARE OLTRE L'ULTIMO ELEMENTO
+        if(activeCard == images.length - 1){
+            // INIZIO DA CAPO
+            activeCard = 0;
+        } else {
+            // INCREMENTO IL VALORE DELLA CARTA ATTIVA
+            activeCard++;
+        }
+        // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
+        card[activeCard].classList.remove('d-none');  
+        // RIMUOVO LA CLASSE opacity ALL'ELEMENTO ATTIVO 
+        thumb[activeCard].classList.remove('opacity-50');
+        thumb[activeCard].classList.add('borderCustom');
+    }, 3000)
+})
+// TASTO STOP
+document.getElementById('stop').addEventListener('click', function() {
+    clearInterval(timer);
+});
+
+
+// il tasto stop funziona e anche il tasto play, solo che dopo il primo stop e il primo play, il tasto stop non funziona piu 

@@ -112,6 +112,25 @@ h2{
     transform: rotate(270deg);
 }
 
+.play,
+.stop {
+    background-color: rgba(110, 110, 110, 0.5);
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    font-size: 15px;
+    top: 5%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    color: rgb(144, 144, 144);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: background-color .5s, color .5s, height .25s, width .25s, font-size .25s
+}
+
 .thumbsnails:hover .prev,.thumbsnails:hover .next {
     background-color: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 1);
@@ -124,6 +143,21 @@ h2{
     font-size: 12.5px;
 }
 
+.play{
+    left: 10px;
+}
+.stop{
+    left: 40px;
+}
+
+.play:hover,
+.stop:hover {
+    color: black;
+}
+
+.main-image:hover .stop,.main-image:hover .play {
+    background-color: rgb(255, 255, 255);
+}
 
 /* SELECTED BORDER */
 .borderCustom{
