@@ -63,6 +63,15 @@ const prev = document.getElementById('prev');
 next.addEventListener('click', function(){
     // CANCELLO LA CARTA ATTUALMENTE ATTIVA
     card[activeCard].classList.add('d-none');
+
+    // AGGIUNGO LE CONDIZIONI PER EVITARE DI ANDARE OLTRE L'ULTIMO ELEMENTO
+    if(activeCard == images.length - 1){
+        // INIZIO DA CAPO
+        activeCard = 0;
+    } else {
+        // INCREMENTO IL VALORE DELLA CARTA ATTIVA
+        activeCard++;
+    }
     
 })
 
