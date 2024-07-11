@@ -25,3 +25,6 @@ const images = [
 
 // RECUPERO LA DESTINAZIONE DELLA CARTA PRINCIPALE
 let card = document.getElementById('card');
+// RECUPERO LA DESTINAZIONE DELLE ANTEPRIME
+let thumbs = document.getElementById('thumbs')
+
