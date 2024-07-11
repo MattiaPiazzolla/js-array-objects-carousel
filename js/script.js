@@ -24,11 +24,19 @@ const images = [
 ];
 
 // RECUPERO LA DESTINAZIONE DELLA CARTA PRINCIPALE
-let card = document.getElementById('card');
+let cardDestination = document.getElementById('card');
 // RECUPERO LA DESTINAZIONE DELLE ANTEPRIME
 let thumbs = document.getElementById('thumbs')
 
 // CICLO L'ARRAY PER CREARE LE CARD DELLE COPERTINE 
 images.forEach((elem, index) => {
-    
+    // VADO A CREARE LE CARD CON GLI ELEMENTI DEGLI OGGETTI DENTRO GLI ARRAY
+    cardDestination.innerHTML += `
+            <div class="item active">
+                <img class="w-100 h-100" src="./${elem.image}" alt="">
+                <div class="card-overlay">
+                    <h5>${elem.title}</h5>
+                    <p>${elem.text}</p>
+                </div>
+            </div>`
 })
