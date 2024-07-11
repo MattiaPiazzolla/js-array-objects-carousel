@@ -32,7 +32,7 @@ let thumbs = document.getElementById('thumbs')
 images.forEach((elem, index) => {
     // VADO A CREARE LE CARD CON GLI ELEMENTI DEGLI OGGETTI DENTRO GLI ARRAY
     cardDestination.innerHTML += `
-            <div class="item active">
+            <div class="item d-none">
                 <img class="w-100 h-100" src="./${elem.image}" alt="">
                 <div class="card-overlay">
                     <h5>${elem.title}</h5>
@@ -45,3 +45,7 @@ images.forEach((elem, index) => {
                 <img src="./${elem.image}" alt="">
             </div>`
 })
+
+// INIZIALIZZO UNA VARIABILE PER TRAGHETIZZARE L'ELEMENTO ATTUALE 
+let activeCard = 0;
+
