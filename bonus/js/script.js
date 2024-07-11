@@ -41,7 +41,7 @@ images.forEach((elem, index) => {
             </div>`
     // AGGIUNGO LE FOTO ALLE ANTEPRIME
     thumbs.innerHTML += `
-            <div class="thumbsnail active">
+            <div class="thumbsnail opacity-50">
                 <img src="./${elem.image}" alt="">
             </div>`
 })
@@ -52,8 +52,15 @@ let activeCard = 0;
 // TARGHETIZZO TUTTI GLI ELEMENTI DEL MAIN CON CALSSE ITEM
 const card = document.querySelectorAll('.item');
 
+// TARGHETIZZO TUTTI GLI ELEMENTI DEL MAIN CON CALSSE ITEM
+const thumb = document.querySelectorAll('.thumbsnail');
+
 // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
 card[activeCard].classList.remove('d-none');
+
+// RIMUOVO LA CLASSE opacity ALL'ELEMENTO ATTIVO 
+thumb[activeCard].classList.remove('opacity-50');
+thumb[activeCard].classList.add('borderCustom');
 
 // RECUPERO I PULSANTI AVANTI E INDIETRO 
 const next = document.getElementById('next');
@@ -63,6 +70,9 @@ const prev = document.getElementById('prev');
 next.addEventListener('click', function(){
     // CANCELLO LA CARTA ATTUALMENTE ATTIVA
     card[activeCard].classList.add('d-none');
+    // ABBASSO L'OPACITÀ DEL THUMB DELLA CARTA ATTUALE
+    thumb[activeCard].classList.add('opacity-50');
+    thumb[activeCard].classList.remove('borderCustom');
 
     // AGGIUNGO LE CONDIZIONI PER EVITARE DI ANDARE OLTRE L'ULTIMO ELEMENTO
     if(activeCard == images.length - 1){
@@ -74,12 +84,19 @@ next.addEventListener('click', function(){
     }
     // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
     card[activeCard].classList.remove('d-none');  
+    // RIMUOVO LA CLASSE opacity ALL'ELEMENTO ATTIVO 
+    thumb[activeCard].classList.remove('opacity-50');
+    thumb[activeCard].classList.add('borderCustom');
+
 })
 
 // ARRIBUISCO LE FUNZIONALITÀ AL PULSANTE PREV
 prev.addEventListener('click', function(){
     // CANCELLO LA CARTA ATTUALMENTE ATTIVA
     card[activeCard].classList.add('d-none');
+    // ABBASSO L'OPACITÀ DEL THUMB DELLA CARTA ATTUALE
+    thumb[activeCard].classList.add('opacity-50');
+    thumb[activeCard].classList.remove('borderCustom');
 
     // AGGIUNGO LE CONDIZIONI PER EVITARE DI ANDARE OLTRE L'ULTIMO ELEMENTO
     if(activeCard == 0){
@@ -91,5 +108,9 @@ prev.addEventListener('click', function(){
     }
     // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
     card[activeCard].classList.remove('d-none');  
+    // RIMUOVO LA CLASSE opacity ALL'ELEMENTO ATTIVO 
+    thumb[activeCard].classList.remove('opacity-50');
+    thumb[activeCard].classList.add('borderCustom');
+    
 })
 

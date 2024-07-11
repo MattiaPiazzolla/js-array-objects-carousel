@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: black;
+}
+
+h2{
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .container-custom{
     width:100%;
@@ -115,6 +123,13 @@
     width: 22.5px;
     font-size: 12.5px;
 }
+
+
+/* SELECTED BORDER */
+.borderCustom{
+    border: 2px solid white;
+}
+
 
 @media screen and (min-width:576px) {
     .container-custom{
