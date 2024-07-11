@@ -28,3 +28,7 @@ let card = document.getElementById('card');
 // RECUPERO LA DESTINAZIONE DELLE ANTEPRIME
 let thumbs = document.getElementById('thumbs')
 
+// CICLO L'ARRAY PER CREARE LE CARD DELLE COPERTINE 
+images.forEach((elem, index) => {
+    
+})
