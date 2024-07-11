@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-custom{
+    width:80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* MAIN IMAGE SECTION */
+
+.main-image{
+    width: 70%;
+    height: 60vh;
+}
+
+.item{
+    height: 100%;
+    position: relative;
+}
+
+.card-overlay{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+}
+
+/* THUMBNAILS SECTION */
+
+.item img, .thumbsnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbsnails{
+    width: 30%;
+    height: 60vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.thumbsnail{
+    height: calc(100% / 5);
+}
+
+.prev,
+.next {
+    background-color: rgba(110, 110, 110, 0.5);
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    font-size: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: background-color .5s, color .5s, height .25s, width .25s, font-size .25s
+}
+.prev{
+    top: 5px;
+}
+.next{
+    bottom: 5px;
+}
+
+.thumbsnails:hover .prev,.thumbsnails:hover .next {
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 1);
+}
+
+.prev:hover,
+.next:hover {
+    height: 22.5px;
+    width: 22.5px;
+    font-size: 12.5px;
+}
