@@ -72,7 +72,8 @@ next.addEventListener('click', function(){
         // INCREMENTO IL VALORE DELLA CARTA ATTIVA
         activeCard++;
     }
-    
+    // RIMUOVO LA CLASSE d-none ALL'ELEMENTO ATTIVO 
+    card[activeCard].classList.remove('d-none');  
 })
 
 
